@@ -24,6 +24,13 @@ cmake ..
 make
 ```
 
+### Running on Microsoft Visual Studio
+```
+Clone or check out code ..
+Repository location : https://github.com/theorist17/graph , hit enter
+Move input.txt and input2.txt into build/ directory
+```
+
 ## Running the tests
 
 ### Setup input.txt

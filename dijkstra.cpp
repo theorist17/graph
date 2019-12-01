@@ -63,7 +63,7 @@ pair<vector<int>, vector<vector<int> > > dijkstra(int at, vector<vector<pair<int
 
     // Returning answer
     vector<vector<int> > path(n);
-    if (distance[n] < 0) // If input is directed asycly graph, no problem here.
+    if (distance[n-1] < 0) // If input is directed asycly graph, no problem here.
     {
         cerr << "Something's wrong about the input graph" << endl;
         return pair<vector<int>, vector<vector<int> > > (); // If no path found.
