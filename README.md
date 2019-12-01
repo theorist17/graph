@@ -1,4 +1,4 @@
-# graph
+# Simple Graph Traversal 
 
 This project implements DFS, BFS, Djikstra algo.
 
@@ -22,10 +22,28 @@ mkdir build
 cd build
 cmake ..
 make
+cd ..
 ```
 
 ## Running the tests
 
+### Setup input.txt
+
+```
+3       (# of vertices)
+1 2 3   (for each vertex, enumerate its adjacent vertex)
+2 1 3
+3 1 2
+2       (# of vertices, for another graph)
+1 2
+2 1
+4       (another graph)
+1 2 3
+2 4
+3 2
+4       (4\n)
+        (eof)
+```
 ### Run BFS & DFS
 
 ```

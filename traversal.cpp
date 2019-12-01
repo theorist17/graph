@@ -47,7 +47,8 @@ int main(int argc, char** argv)
         cout << LINE << endl;
         cout << "Graph " << g << endl;
         cout << LINE << endl;
-        int n;    // node size of a graph
+
+        int n;    // node size of a graph<< j << " (" << edges[i][j] << ") ";
         ifs >> n;
         cout << "Vertex" << endl << n << endl << LINE << endl;
 
@@ -106,8 +107,6 @@ int main(int argc, char** argv)
             cout << sequence[i] << " " ;
         cout << endl;
         cout << LINE << endl;
-
-
 
         cout << endl << endl << endl << endl << endl << endl << endl;
 
