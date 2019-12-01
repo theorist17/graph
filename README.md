@@ -22,7 +22,6 @@ mkdir build
 cd build
 cmake ..
 make
-cd ..
 ```
 
 ## Running the tests
@@ -47,13 +46,13 @@ cd ..
 ### Run BFS & DFS
 
 ```
-./traversal
+./traversal (inside build/)
 ```
 
 ### Run Dijkstra
 
 ```
-./shortest_path
+./shortest_path (inside build/)
 ```
 
 ## Authors

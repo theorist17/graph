@@ -92,7 +92,7 @@ pair<vector<int>, vector<vector<int> > > dijkstra(int at, vector<vector<pair<int
 
 int main(int argc, char**argv)
 {
-    ifstream ifs("input2.txt"); // Read from file
+    ifstream ifs("../input2.txt"); // Read from file
 
     for (int g = 1; ifs.peek()!=EOF; g++)
     {

@@ -43,7 +43,7 @@ vector<int> bfs(int at, vector<vector<bool> > &edges, vector<bool> &visited){
 
 int main(int argc, char** argv)
 {
-    ifstream ifs("input.txt");// read from text file
+    ifstream ifs("../input.txt");// read from text file
 
     for (int g = 1; ifs.peek()!=EOF; g++) // if next character is EOF, break
     {
