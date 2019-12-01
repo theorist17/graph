@@ -11,7 +11,8 @@ Things you need to install this software
 ```
 CMake
 ```
-### Installing
+
+### Installing on Unix Terminal
 
 A step by step series of commands to get a development env running
 
@@ -24,11 +25,12 @@ cmake ..
 make
 ```
 
-### Running on Microsoft Visual Studio
+### Installing on Microsoft Visual Studio
 ```
-Clone or check out code ..
-Repository location : https://github.com/theorist17/graph , hit enter
-Move input.txt and input2.txt into build/ directory
+1. Open VS
+2. File -> Clone or check out code ..
+3. Set Repository location = https://github.com/theorist17/graph
+4. After building, move input.txt and input2.txt into the /out/build/ directory
 ```
 
 ## Running the tests
@@ -53,8 +55,11 @@ Move input.txt and input2.txt into build/ directory
 ### Run BFS & DFS
 
 ```
-./traversal (inside build/)
+./traversal
+or
+traversal.exe
 ```
+Output
 ```
 ----------------------------
 Graph 1
@@ -84,9 +89,11 @@ Breadth first search
 ### Run Dijkstra
 
 ```
-./shortest_path (inside build/)
+./shortest_path
+or 
+traversal.exe
 ```
-
+Output
 ```
 ----------------------------
 Graph 1
