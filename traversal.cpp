@@ -7,15 +7,17 @@
 
 using namespace std;
 
+// recursive dfs
 void dfs(int at, int depth,  vector<vector<bool> > &edges, vector<bool> &visited, vector<int> &sequence){
-    sequence.push_back(at);
+    sequence.push_back(at); // answer
     visited[at] = true;
-    for (int i = 1 ; i < edges.size() ; i++) {
+    for (int i = 1 ; i < edges.size() ; i++) { // start indexing from 1
         if (edges[at][i] && !visited[i])
             dfs(i, depth+1, edges, visited, sequence);
     }
 }
 
+// bfs using C++ STL queue
 vector<int> bfs(int at, vector<vector<bool> > &edges, vector<bool> &visited){
     vector<int> sequence;
 
@@ -32,7 +34,7 @@ vector<int> bfs(int at, vector<vector<bool> > &edges, vector<bool> &visited){
             if (edges[at][i] && !visited[i])
             {
                 q.push(i);
-                visited[i] = true;
+                visited[i] = true; // avoid revisiting
             }
         }
     }
@@ -41,40 +43,46 @@ vector<int> bfs(int at, vector<vector<bool> > &edges, vector<bool> &visited){
 
 int main(int argc, char** argv)
 {
-    ifstream ifs("input.txt");
-    for (int g = 1; ifs.peek()!=EOF; g++)
+    ifstream ifs("input.txt");// read from text file
+
+    for (int g = 1; ifs.peek()!=EOF; g++) // if next character is EOF, break
     {
+
+        // Print graph
         cout << LINE << endl;
         cout << "Graph " << g << endl;
         cout << LINE << endl;
 
+        // Print size of vertex
         int n;    // node size of a graph<< j << " (" << edges[i][j] << ") ";
         ifs >> n;
-        cout << "Vertex" << endl << n << endl << LINE << endl;
+        cout << "Vertex" << endl << n << endl << LINE << endl; 
 
-        // edge reading
+        // Read edges from files and store it into 2D vector
         cout << "Edges" << endl;
         int t;
         vector<vector<bool> > edges(n+1, vector<bool>(n+1, 0)); // using vector to store edges
-        for (int v = 1; v <= n; v++)
+                                                                // init to zero
+        for (int v = 1; v <= n; v++) // for each edge
         {
-            ifs >> t;
+            ifs >> t; // read out the first character
             cout << t << " ";
             while(true) 
             {
-                if (ifs.peek()=='\n')
+                if (ifs.peek()=='\n')  // if '\n' comming up, break
                 {
                     char c; ifs.get(c); // this will get '\n'
                     break;
                 } 
-                ifs >> t; 
+                ifs >> t;  // safe to read until '\n' comes up
                 cout << t << " ";
-                edges[v][t] = true;
+                edges[v][t] = true; // represent edge
             }
             cout << endl;
         }
         cout << LINE << endl;
 
+        // Print adjacency matrix from data read into "edges"
         cout << "Adjacency matrix" << endl;
         for (int i = 1; i <= n ; i++)
         {
@@ -89,7 +97,7 @@ int main(int argc, char** argv)
         }
         cout << LINE << endl;
 
-
+        // Print depth first search result
         cout << "Depth first search" << endl;
         vector<bool> visited(n+1, false);
         vector<int> sequence;
@@ -99,6 +107,7 @@ int main(int argc, char** argv)
         cout << endl;
         cout << LINE << endl;
 
+        // Print bfs result
         cout << "Breadth first search" << endl;
         fill(visited.begin(), visited.end(), false); // reset every value of a vector<bool> to false
         sequence.clear();   // removes all elements from the vector
@@ -108,6 +117,7 @@ int main(int argc, char** argv)
         cout << endl;
         cout << LINE << endl;
 
+        // Huge blank
         cout << endl << endl << endl << endl << endl << endl << endl;
 
     }
