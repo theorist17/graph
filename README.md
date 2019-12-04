@@ -25,9 +25,10 @@ cmake ..
 make
 ```
 
+### Installing on Microsoft Visual Studio
+
 For MSVC, built-target and input text file has to manually located.
 
-### Installing on Microsoft Visual Studio
 ```
 1. Open VS
 2. File -> Clone or check out code ..
@@ -55,6 +56,8 @@ For MSVC, built-target and input text file has to manually located.
         (eof)
 ```
 ### Run BFS & DFS
+
+Execution
 
 ```
 ./traversal
@@ -89,6 +92,8 @@ Breadth first search
 
 
 ### Run Dijkstra
+
+Execution
 
 ```
 ./shortest_path
