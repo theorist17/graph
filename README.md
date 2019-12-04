@@ -25,11 +25,13 @@ cmake ..
 make
 ```
 
+For MSVC, built-target and input text file has to manually located.
+
 ### Installing on Microsoft Visual Studio
 ```
 1. Open VS
 2. File -> Clone or check out code ..
-3. Set Repository location = https://github.com/theorist17/graph
+3. Set Repository location = https://github.com/theorist17/graph (you need to setup github on VS first)
 4. After building, move input.txt and input2.txt into the /out/build/ directory
 ```
 
@@ -128,4 +130,5 @@ Vertex 5 : 1 - 4 - 3 - 5, distance : 60
 * **Hong-In Lee** - *Algorithm* - [theorist17](https://github.com/theorist17)
 
 ## Acknowledgements 
+* [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - A template to make good README.md by PurpleBooth
 
